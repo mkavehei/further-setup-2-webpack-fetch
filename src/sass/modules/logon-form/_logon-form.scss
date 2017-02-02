@@ -1,0 +1,114 @@
+.logonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flext-start;
+  // justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #333;
+
+  @include break(md) { 
+    flex-direction: row;
+  }
+}
+
+.logonForm {
+  flex: 1 1 100%;
+  background: #000;
+  border-radius: 0;
+  padding: 80px 20px 20px 20px;
+  width: 100%;
+
+  @include break(md) {
+    width: 300px;
+    margin-top: 0;
+    padding-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+.logonInputGroup {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid rgba(255, 252, 232, 0.1);
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+
+.logonInputGroup input {
+  outline: none;
+  border: 0;
+  color: #999;
+  background: transparent;
+  font-family: "Lato", sans-serif;
+  flex: 1 0 auto;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.logonInputGroup input:focus ~ label {
+  opacity: 1;
+}
+
+.logonInputGroup input[type='text'] ~ label::before {
+  content: "\F007";
+}
+
+.logonInputGroup input[type='email'] ~ label::before {
+  content: "\F1FA";
+}
+
+.logonInputGroup input[type='password'] ~ label::before {
+  content: "\F023";
+}
+
+.logonInputGroup label {
+  font-family: FontAwesome;
+  font-size: 13px;
+  opacity: .1;
+  transition: opacity .5s ease;
+}
+
+.logonInputGroup label::before {
+  align-items: center;
+  color: #FFFCE8;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.logonForm__button {
+  align-items: center;
+  background: #e91e63;
+  border: 0;
+  border-radius: 0;
+  color: white;
+  display: flex;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  justify-content: center;
+  margin-top: 20px;
+  outline: none;
+  padding: 15px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.logonForm__button .fa {
+  font-size: 12px;
+  margin-left: auto;
+  position: relative;
+  top: 1px;
+}
+
+.logonForm__button:hover {
+  transform: scale(1.02);
+}
+
+.logonForm__button:active {
+  transform: scale(0.99);
+}

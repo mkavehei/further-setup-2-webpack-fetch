@@ -1,0 +1,42 @@
+.siteNav {
+	background-color: forestgreen;
+	color: goldenrod;
+	width: 100%;
+	height: 60px;
+
+	@include respondTo(small) {
+		visibility: hidden;
+	}	
+
+	@include respondTo(small) {
+		visibility: hidden;
+	}
+
+	.navlinks {
+	  flex: 1;
+	  display: flex;
+	  justify-content: center;
+	  align-items:  center;
+
+	  border: none;
+	  height: inherit;
+	  line-height: inherit;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+
+    &__item {
+      border: none;
+      line-height: 1;
+
+      a {
+        border-bottom: 0;
+        font-family: _font(family-heading);
+        font-size: 0.7em;
+        font-weight: _font(weight-heading);
+        letter-spacing: _font(kerning-heading);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

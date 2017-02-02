@@ -1,0 +1,135 @@
+.mobileMenu {
+	position: absolute;
+	display: none;
+	overflow-y: hidden;
+	top: 0;
+	right: 0;
+	background: rgba(0,0,0,0.9);
+	width: 320px;
+	height: 100%;
+	z-index: 1000;
+	border-left: 1px solid #333;
+	border-bottom: 1px solid #333;
+
+	.navigation__link--list {
+		padding-left: 0px;
+		@media all and (max-width: 768px) and (orientation:landscape) { 
+			display: flex;
+	    justify-content: center;
+	    width: 320px;
+	    flex-wrap: wrap;
+		}
+
+		.navigation__link--mobile {
+			list-style-type: none;
+			padding-left: 10px;
+			padding-right: 10px;
+			  a {	
+			    text-transform: uppercase;
+				  font-weight: 400;
+				  font-size: 1.375rem;
+				  letter-spacing: 1px;
+				  color: #fff;
+				  // font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;
+				  text-align: center;
+				  padding: 5px;
+			  }	  
+			}
+		}
+
+		.navigation__link--logo {
+			display: none;
+			list-style-type: none;
+			padding-left: 30px;
+			padding-right: 30px;
+
+			a {	
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 1.375rem;
+				letter-spacing: 1px;
+				color: #fff;
+				font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;
+				text-align: center;
+				padding: 5px 5px; 
+			}
+		}
+
+	a {
+	  background: rgba(0,0,0,0.2);		  
+	  display: inline-block;
+	  width: 100%;
+	  text-decoration: none;
+	  transition:all 0.5s;
+	  padding: 10px 5px;
+	  color: #333;
+	}
+
+	a:hover {
+		background: rgba(0,0,0,0.5);
+	}
+
+	.menuClose {
+		text-align: right;
+		position: relative;
+		right: 12px;
+		font-size: 30px;
+		top: -3px;
+		color: #fff;
+	}
+}
+
+.magictime {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.magic {
+  animation-name: magic;
+}
+
+.slideLeft {
+  animation-name: slideLeft;
+}
+
+.slideRight {
+  animation-name: slideRight;
+}
+
+@keyframes magic {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 200%;
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 200% 500%;
+    transform: scale(0, 0) rotate(270deg);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,46 @@
+.flipCardContainer {
+  margin: 20px auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+  perspective: 1000;
+  border: 1px solid tomato;
+}
+
+.flipCard {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+
+  // transform-origin: right center; 
+
+  &__face {
+    margin: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__front {
+    background: tomato;
+    color: #fff;
+  }
+
+  &__back {
+    background: seashell;
+    color: #333;
+    transform: rotateY( 180deg );
+  }
+}
+
+ .flipCardContainer:hover .flipCard {
+  transform: rotateY( 180deg );
+ }

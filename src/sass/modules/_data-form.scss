@@ -1,0 +1,184 @@
+.dataForm {
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__section {
+    margin-top: 15px;
+    // margin-left: 35px;
+    // border: 3px solid transparent;
+    // border: 1px solid blue;
+    &--combo {
+      display: flex;
+    }
+  }
+
+  &__buttonPanel {
+    
+    margin-top: 25px;
+  }
+
+  .dataInput {
+    // color: red;
+    width: 100%;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+  }
+
+  input {
+    margin-bottom: 8px;
+    // font-size: 14px;
+    // padding: 5px;
+    // border: 0;
+    border: none;
+    // width: 620px;
+    padding: 25px 25px 10px;
+    font-size: 18px;
+    // text-transform: uppercase;
+    max-width: 100%;
+    // border: 3px solid transparent;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+  }
+
+  input:focus, input:active {
+    outline: none;
+  }
+
+  .inputGroup {
+    position: relative;
+
+    &--country {
+      width: 45%;
+    }
+
+    &--state {
+      width: 35%;
+    }
+
+    &--zip {
+      width: 20%;
+      height: 70px;
+      margin-top: 0;
+      background-color: #fff;
+    }
+
+    label.textArealabel {
+      top: 20px;
+    }
+
+    .dataInput--secondary {
+      padding: 5px;
+      font-size: 1.25rem;
+    }
+
+    .inputGroup label.dataLabel--secondary {
+      font-size: 14px;
+    }
+
+    .dataInput--bordered {
+      border: 1px solid #999;
+      border-radius: 0;
+    }
+  }
+
+  .inputGroup label {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transform: translateY(-50%);
+    font-style: italic;
+    // font-size: 14px;
+    font-size: 18px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.15s ease-out 0s;
+
+    &.dropdownlabel {
+      top: 20px;
+    }
+  }
+
+  .inputGroup .psudoLabel {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transform: translateY(-50%);
+    font-style: italic;
+    // font-size: 14px;
+    font-size: 18px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.15s ease-out 0s;
+
+    &.dropdownlabel {
+      top: 20px;
+    }
+  }
+
+  .inputGroup input:focus + label,
+  .inputGroup input.js-userData + label {
+    top: 20px;
+    // font-size: 12px;
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  .dropdownPanel {
+    background-color: #fff;
+    height: 80px;
+    padding-top: 35px;
+    // padding-left: 25px; 
+  }
+}
+
+.dataForm__buttonPanel--secondary {
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dataForm__buttonPanel--tertiary {
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.actionButton--bordered {
+  border: 1px solid;
+
+  &:hover {
+    border-bottom-color: inherit;
+  }
+}
+
+.selectStyled select {
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.5rem;
+  border: 0;
+  border-radius: 0;
+  height: 2.5rem;
+  -webkit-appearance: none;
+}
+
+.selectStyled {
+   width: 98%;
+   height: 2.5rem;
+   overflow: hidden;
+   // background: url(../../images/dd-down.png) no-repeat right #ddd;
+  //  background: url(../../images/down_arrow_select.jpg) no-repeat right #fff;
+   border: 1px solid #ccc;
+   margin-right: auto;
+   margin-left: auto;
+ }
+

@@ -1,0 +1,37 @@
+.siteContainer {
+	position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
+	transition: 'opacity #{_duration(menu)} ease';
+	opacity: 1;
+	padding: 0;
+	background-color: #333;
+
+	@include respondTo(x-large) {
+		padding: _size(section-spacing);
+	}
+
+	@include respondTo(large) {
+		padding: _size(section-spacing-small);
+	}
+
+	.is-menu-visible {
+		opacity: 0.15;
+	}
+
+	@include respondTo(x-small) {
+		padding: 5px;
+	}
+
+	@include respondTo(small) {
+	}
+
+	.siteAttraction {
+		position: relative;
+		height: 400px;
+		width: 100%;
+		overflow:	hidden;
+		margin-bottom: 25px;
+	}
+}
